@@ -1,0 +1,100 @@
+import random
+
+ops = ["Piedra", "Papel", "Tijera", "Lagarto", "Spock"]
+
+exit = "no"
+while exit != "si":
+
+    ElectionM = random.choice(ops)
+    PIEDRA = 1
+    PAPEL = 2
+    TIJERA = 3
+    LAGARTO = 4
+    SPOCK = 5
+
+    print(f"""\tPIEDRA, PAPEL, TIJERA, LAGARTO O SPOCK!
+
+{PIEDRA}) Piedra
+{PAPEL}) Papel
+{TIJERA}) Tijera
+{LAGARTO}) Lagarto
+{SPOCK}) Spock
+""")
+
+    ElectionJ = int(input("Elija una opcion: "))
+    
+    if ElectionJ == PIEDRA:
+        print(f"Haz elegido piedra")
+        print(f"Y la maquina {ElectionM}")
+        if ElectionM == "Piedra":
+            print("Empate")
+        elif ElectionM == "Papel":
+            print("Haz perdido")
+        elif ElectionM == "Tijera":
+            print("Haz gando")
+        elif ElectionM == "Lagarto":
+            print("Haz ganado")
+        else:
+            print("Haz perdido")
+    
+    elif ElectionJ == PAPEL:
+        print(f"Haz elegido papel")
+        print(f"Y la maquina {ElectionM}")
+        if ElectionM == "Piedra":
+            print("Haz gando")
+        elif ElectionM == "Papel":
+            print("Empate")
+        elif ElectionM == "Tijera":
+            print("Haz perdido")
+        elif ElectionM == "Lagarto":
+            print("Haz perdido")
+        else:
+            print("Haz ganado")
+
+    elif ElectionJ == TIJERA:
+        print(f"Haz elegido tijera")
+        print(f"Y la maquina {ElectionM}")
+        if ElectionM == "Piedra":
+            print("Haz perdido")
+        elif ElectionM == "Papel":
+            print("Haz ganado")
+        elif ElectionM == "Tijera":
+            print("Empate")
+        elif ElectionM == "Lagarto":
+            print("Haz ganado")
+        else:
+            print("Haz perdido")
+
+    elif ElectionJ == LAGARTO:
+        print(f"Haz elegido lagarto")
+        print(f"Y la maquina {ElectionM}")
+        if ElectionM == "Piedra":
+            print("Haz perdido")
+        elif ElectionM == "Papel":
+            print("Haz ganado")
+        elif ElectionM == "Tijera":
+            print("Haz perdido")
+        elif ElectionM == "Lagarto":
+            print("empate")
+        else:
+            print("Haz ganado")
+
+    elif ElectionJ == SPOCK:
+        print(f"Haz elegido spock")
+        print(f"Y la maquina {ElectionM}")
+        if ElectionM == "Piedra":
+            print("Haz ganado")
+        elif ElectionM == "Papel":
+            print("Haz perdido")
+        elif ElectionM == "Tijera":
+            print("Haz ganado")
+        elif ElectionM == "Lagarto":
+            print("Haz perido")
+        else:
+            print("empate")
+    
+    else:
+        print("Entrada invalida.")
+
+    exit = input("Desea salir? ")
+    exit = exit.lower()
